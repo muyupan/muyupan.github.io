@@ -5,32 +5,70 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
-
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<style>
+/* Custom styling to match the requested format */
+.pub-item {
+    margin-bottom: 2em;
+    font-size: 0.95em;
+}
+.pub-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333; /* Dark grey instead of standard link blue for title */
+    text-decoration: none;
+}
+.pub-title:hover {
+    text-decoration: underline;
+}
+.pub-authors {
+    font-style: italic;
+    margin-top: 0.2em;
+}
+.pub-venue {
+    margin-top: 0.2em;
+    color: #555;
+}
+.pub-links a {
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 0.9em;
+    margin-right: 0.5em;
+    color: #0077cc;
+}
+.pub-links a:hover {
+    text-decoration: underline;
+}
+</style>
 
+<div class="pub-item">
+    <a href="https://ieeexplore.ieee.org/document/11250432" class="pub-title">Fine-Tuned Large Language Models for Logical Translation: Reducing Hallucinations with Lang2Logic</a>
+    <div class="pub-authors">
+        <strong>Muyu Pan</strong>, Dheeraj Kodakandla, and Mahfuza Farooque
+    </div>
+    <div class="pub-venue">
+        Published in <em>2025 IEEE International Symposium on Networks, Computers and Communications (ISNCC)</em>, 2025
+    </div>
+    <div class="pub-links">
+        <a href="https://ieeexplore.ieee.org/document/11250432">[IEEE Paper]</a>
+        <a href="/files/Fine-Tuned_Large_Language_Models_for_Logical_Translation_Reducing_Hallucinations_with_Lang2Logic.pdf">[Download PDF]</a>
+    </div>
+</div>
 
-
+<div class="pub-item">
+    <a href="https://ncur.secure-platform.com/2025/gallery/rounds/30/details/31237" class="pub-title">Analysis of Automated Theorem Proving through Abstraction of Logical Expressions</a>
+    <div class="pub-authors">
+        <strong>Muyu Pan</strong>
+    </div>
+    <div class="pub-venue">
+        Published in <em>National Conference on Undergraduate Research (NCUR)</em>, 2025
+    </div>
+    <div style="font-size: 0.9em; color: #d9534f;">
+        Oral Presentation at NCUR 2025
+    </div>
+    <div class="pub-links">
+        <a href="https://ncur.secure-platform.com/2025/gallery/rounds/30/details/31237">[Abstract]</a>
+        <a href="/files/muyu_ncur.pptx.pdf">[Download Slides]</a>
+    </div>
+</div>
