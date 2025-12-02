@@ -5,6 +5,5 @@ permalink: /awards/
 author_profile: true
 ---
 
-* **2025**: Best Paper Award, IEEE Conference on Something
-* **2024**: University Fellowship, Penn State University
-* **2023**: Dean's List
+* **2025**: Penn State Computer Science and Engineering Department and Schreyer Honors College Conference Travel Grant ($1000)
+* **2023**: [Schreyer Honors Scholar](https://www.shc.psu.edu/)
