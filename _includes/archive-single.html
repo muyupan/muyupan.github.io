@@ -34,6 +34,16 @@
       {% endif %}
     </h2>
     
+    {% comment %} >>> START: Custom Author Display Block <<< {% endcomment %}
+    {% if post.author_list_full %}
+      <p class="archive__item-authors" style="font-style: italic; margin: 0.25em 0;">{{ post.author_list_full }}</p>
+    {% elsif post.citation %}
+      {% capture author_line %}{{ post.citation | split: '(' | first | strip }}{% endcapture %}
+      {% comment %} Fallback to the old method if the custom field is missing {% endcomment %}
+      <p class="archive__item-authors" style="font-style: italic; margin: 0.25em 0;">{{ author_line | replace: '.', '' }}</p>
+    {% endif %}
+    {% comment %} >>> END: Custom Author Display Block <<< {% endcomment %}
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}

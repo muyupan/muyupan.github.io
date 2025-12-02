@@ -3,11 +3,12 @@ title: "Fine-Tuned Large Language Models for Logical Translation: Reducing Hallu
 collection: publications
 category: conferences
 permalink: /publication/2025-01-01-lang2logic
-excerpt: 'This work introduces a novel framework that inputs English sentences, converts them into logical expressions, and then translates them into Conjunctive Normal Form (CNF) for satisfiability solving. It utilizes a fine-tuned language model to reduce hallucinations in logical translation tasks.'
+#excerpt: 'This work introduces a novel framework that inputs English sentences, converts them into logical expressions, and then translates them into Conjunctive Normal Form (CNF) for satisfiability solving. It utilizes a fine-tuned language model to reduce hallucinations in logical translation tasks.'
 date: 2025-01-01
 venue: '2025 IEEE International Symposium on Networks, Computers and Communications (ISNCC)'
 paperurl: 'https://ieeexplore.ieee.org/document/11250432'
-citation: 'M. Pan, D. Kodakandla, and M. Farooque. (2025). &quot;Fine-Tuned Large Language Models for Logical Translation: Reducing Hallucinations with Lang2Logic.&quot; <i>2025 IEEE International Symposium on Networks, Computers and Communications (ISNCC)</i>. pp. 1-4.'
+author_list_full: 'Muyu Pan, Dheeraj Kodakandla, and Mahfuza Farooque'
+#citation: 'M. Pan, D. Kodakandla, and M. Farooque. (2025). &quot;Fine-Tuned Large Language Models for Logical Translation: Reducing Hallucinations with Lang2Logic.&quot; <i>2025 IEEE International Symposium on Networks, Computers and Communications (ISNCC)</i>. pp. 1-4.'
 ---
 
 ## Abstract
