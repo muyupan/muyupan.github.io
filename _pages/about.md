@@ -27,8 +27,8 @@ and rendered directly here to achieve the single-page scroll effect.
   {{ awards_page.content }}
 {% endif %}
 
-<h2 id="projects">Projects</h2>
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
+<h2 id="projects">Research Projects</h2>
+{% for post in site.portfolio reversed %}
+  {% include archive-project.html %}
 {% endfor %}
 
