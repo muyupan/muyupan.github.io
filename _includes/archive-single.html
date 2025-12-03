@@ -34,14 +34,15 @@
       {% endif %}
     </h2>
     
-    {% comment %} Custom Author Display Block (KEPT) {% endcomment %}
+    {% comment %} >>> START: Custom Author Display Block (KEPT) <<< {% endcomment %}
     {% if post.author_list_full %}
-      <p class="archive__item-authors" style="margin: 0.25em 0;">{{ post.author_list_full }}</p>
+      <p class="archive__item-authors" style="font-style: italic; margin: 0.25em 0;">{{ post.author_list_full | markdownify | remove: '<p>' | remove: '</p>' }}</p>
     {% elsif post.citation %}
       {% capture author_line %}{{ post.citation | split: '(' | first | strip }}{% endcapture %}
-      <p class="archive__item-authors" style="margin: 0.25em 0;">{{ author_line | replace: '.', '' }}</p>
+      <p class="archive__item-authors" style="font-style: italic; margin: 0.25em 0;">{{ author_line | replace: '.', '' }}</p>
     {% endif %}
-    
+    {% comment %} >>> END: Custom Author Display Block (KEPT) <<< {% endcomment %}
+
     {% if post.read_time %}
       <p class="page__meta"><i class="fa fa-clock" aria-hidden="true"></i> {% include read-time.html %}</p>
     {% endif %}
@@ -55,16 +56,16 @@
         {% endif %}
 
     {% comment %} 
-    *** START: ABSTRACT/EXCERPT BLOCK COMMENTED OUT ***
+    *** START: ABSTRACT/EXCERPT BLOCK (HIDDEN) ***
     {% if post.excerpt and site.read_more != 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
     {% elsif post.excerpt and site.read_more == 'enabled' %}
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
-    *** END: ABSTRACT/EXCERPT BLOCK COMMENTED OUT *** {% endcomment %}
+    *** END: ABSTRACT/EXCERPT BLOCK (HIDDEN) *** {% endcomment %}
     
     {% comment %} 
-    *** START: DOWNLOAD/CITATION LINKS BLOCK COMMENTED OUT ***
+    *** START: CITATION AND DOWNLOAD LINKS BLOCK (HIDDEN) ***
     {% if post.citation and post.paperurl and post.slidesurl and post.bibtexurl %}
       <p>Recommended citation: {{ post.citation }}<br /><a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% elsif post.citation and post.paperurl and post.slidesurl %}
@@ -92,7 +93,7 @@
     {% elsif post.bibtexurl %}
       <p><a href="{{ post.bibtexurl }}">Download Bibtex</a></p>
     {% endif %}
-    *** END: DOWNLOAD/CITATION LINKS BLOCK COMMENTED OUT ***
+    *** END: CITATION AND DOWNLOAD LINKS BLOCK (HIDDEN) ***
     {% endcomment %}
     
   </article>

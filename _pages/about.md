@@ -19,3 +19,8 @@ My research interest covers **AI Safety** (Hallucination Detection and Mitigatio
 {% for post in site.portfolio %}
   {% include archive-single.html %}
 {% endfor %}
+
+<h2 id="awards">Awards</h2>
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %}
