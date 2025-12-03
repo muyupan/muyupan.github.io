@@ -15,11 +15,6 @@ My research interest covers **AI Safety** (Hallucination Detection and Mitigatio
   {% include archive-single.html %}
 {% endfor %}
 
-<h2 id="projects">Projects</h2>
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
 <h2 id="awards">Awards</h2>
 
 {% comment %} 
@@ -31,3 +26,9 @@ and rendered directly here to achieve the single-page scroll effect.
 {% if awards_page %}
   {{ awards_page.content }}
 {% endif %}
+
+<h2 id="projects">Projects</h2>
+{% for post in site.portfolio %}
+  {% include archive-single.html %}
+{% endfor %}
+
