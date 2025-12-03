@@ -21,6 +21,13 @@ My research interest covers **AI Safety** (Hallucination Detection and Mitigatio
 {% endfor %}
 
 <h2 id="awards">Awards</h2>
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+
+{% comment %} 
+The content for the Awards page is loaded as a standalone page object
+and rendered directly here to achieve the single-page scroll effect.
+{% endcomment %}
+{% assign awards_page = site.pages | where: "permalink", "/awards/" | first %}
+
+{% if awards_page %}
+  {{ awards_page.content }}
+{% endif %}
