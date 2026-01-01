@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "air" # Currently available options are "default", "air"
-title                    : "Muyu's Homepage"
+title                    : "Muyu Pan"
 title_separator          : "-"
-name                     : &name "Muyu Pan"
-description              : &description "Undergraduate student at Penn State University"   # Update this with a general description of your site, this is the default if not overridden by a page
+name                     : "Muyu Pan"
+description              : "Muyu Pan is a Computer Science Honors student at Penn State University specializing in Machine Learning."   # Update this with a general description of your site, this is the default if not overridden by a page
 url                      : "https://muyupan.github.io" # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
                                                            # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
@@ -55,7 +55,7 @@ author:
   # Social media
   artstation       : # Username
   bluesky          : #"bsky.app" # Replace this with you Bluesky username
-  facebook         : Muyu Pan 
+  facebook         : "https://www.facebook.com/muyu.pan.2025"
   flickr           : # Username
   foursquare       : # Username
   goodreads        : # Username
@@ -63,7 +63,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : Muyu Pan
+  linkedin         : "https://www.linkedin.com/in/muyupan/"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -154,9 +154,9 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "false" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : "google-analytics-4" # false (default), "google", "google-universal", "google-analytics-4", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "G-TKJWYHZP96"
 
 
 # Reading Files
